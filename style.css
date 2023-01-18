@@ -1,0 +1,107 @@
+body {
+  background: rgb(20, 14, 111);
+  background: radial-gradient(
+    circle,
+    rgba(20, 14, 111, 0.6310904872389791) 45%,
+    rgba(47, 59, 166, 0.5220417633410672) 94%
+  );
+}
+
+.clock {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  height: 500px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: relative;
+  border: 10px;
+  margin: 0 auto; /*why does align: center; not work?? */
+  border: solid 5px;
+}
+
+.clock .number {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.number1 {
+  transform: rotate(30deg);
+}
+.number2 {
+  transform: rotate(60deg);
+}
+.number3 {
+  transform: rotate(90deg);
+}
+.number4 {
+  transform: rotate(120deg);
+}
+.number5 {
+  transform: rotate(150deg);
+}
+.number6 {
+  transform: rotate(180deg);
+}
+.number7 {
+  transform: rotate(210deg);
+}
+.number8 {
+  transform: rotate(240deg);
+}
+.number9 {
+  transform: rotate(270deg);
+}
+.number10 {
+  transform: rotate(300deg);
+}
+.number11 {
+  transform: rotate(330deg);
+}
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+}
+
+.hour {
+  position: absolute;
+  width: 20px;
+  height: 30%;
+  background-color: black;
+}
+
+.minute {
+  position: absolute;
+  width: 15px;
+  height: 40%;
+  background-color: black;
+}
+
+.second {
+  position: absolute;
+  width: 5px;
+  height: 45%;
+  background-color: red;
+}
+
+.center {
+  content: "";
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
